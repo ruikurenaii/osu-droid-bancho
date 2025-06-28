@@ -43,6 +43,10 @@ class StandardDifficultyCalculator : DifficultyCalculator<StandardPlayableBeatma
             aimDifficulty = 0.0
             speedDifficulty *= 0.5
             flashlightDifficulty *= 0.4
+        } else if (mods.any { it is ModRelax }) {
+            aimDifficulty *= 1.0
+            speedDifficulty *= 1.0
+            flashlightDifficulty *= 1.0
         }
 
         val baseAimPerformance = (5 * max(1.0, aimDifficulty / 0.0675) - 4).pow(3) / 100000
