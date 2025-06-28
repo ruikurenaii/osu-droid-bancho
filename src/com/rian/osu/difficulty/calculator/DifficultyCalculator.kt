@@ -25,8 +25,8 @@ abstract class DifficultyCalculator<TBeatmap : PlayableBeatmap, TObject : Diffic
      * [Mod]s that can alter the star rating when they are used in calculation with one or more [Mod]s.
      */
     protected open val difficultyAdjustmentMods = setOf(
-        ModDoubleTime(), ModHalfTime(), ModNightCore(),
-        ModRelax(), ModAutopilot(), ModEasy(), ModReallyEasy(),
+        ModDoubleTime(), ModHalfTime(), ModNightCore(), 
+        ModAutopilot(), ModEasy(), ModReallyEasy(),
         ModHardRock(), ModHidden(), ModFlashlight(),
         ModDifficultyAdjust()
     )
