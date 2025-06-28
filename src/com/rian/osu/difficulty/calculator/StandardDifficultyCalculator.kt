@@ -39,11 +39,7 @@ class StandardDifficultyCalculator : DifficultyCalculator<StandardPlayableBeatma
         populateSpeedAttributes(skills)
         populateFlashlightAttributes(skills)
 
-        if (mods.any { it is ModRelax }) {
-            aimDifficulty *= 0.9
-            speedDifficulty = 0.0
-            flashlightDifficulty *= 0.7
-        } else if (mods.any { it is ModAutopilot }) {
+        if (mods.any { it is ModAutopilot }) {
             aimDifficulty = 0.0
             speedDifficulty *= 0.5
             flashlightDifficulty *= 0.4
@@ -89,10 +85,6 @@ class StandardDifficultyCalculator : DifficultyCalculator<StandardPlayableBeatma
         if (mods.none { it is ModAutopilot }) {
             skills.add(StandardAim(mods, true))
             skills.add(StandardAim(mods, false))
-        }
-
-        if (mods.none { it is ModRelax }) {
-            skills.add(StandardSpeed(mods))
         }
 
         if (mods.any { it is ModFlashlight }) {
