@@ -27,8 +27,8 @@ public class CursorTrail extends ParticleSystem {
         this.cursor = cursor;
 
         // Cancelling the speed multiplier for the trail.
-        addParticleModifier(new ExpireModifier(0.1f * GameHelper.getSpeedMultiplier()));
-        addParticleModifier(new AlphaModifier(GameHelper.getSpeedMultiplier(), 0.0f, 0f, 0.10f));
+        addParticleModifier(new ExpireModifier(0.1425f));
+        addParticleModifier(new AlphaModifier(0.1425f, 0.0f, 0f, 0.1425f));
 
         setBlendFunction(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA);
         addParticleInitializer(new ScaleInitializer(cursor.baseSize));
