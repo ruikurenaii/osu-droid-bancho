@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ banchorx-main ]
   pull_request:
-    branches: [ master ]
+    branches: [ banchorx-main ]
 
 jobs:
   build:
